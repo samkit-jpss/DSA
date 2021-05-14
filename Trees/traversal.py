@@ -1,3 +1,4 @@
+from collections import deque
 class TreeNode:
     def __init__(self,data):
         self.data=data
@@ -44,9 +45,27 @@ def in_order(mytree):
     pre_order(mytree.leftChild)
     print(mytree.data,end="->")
     pre_order(mytree.rightChild)
+
+#Level-Order Traversal
+def level_order(root):
+    if root is None:
+        return "No Root Node"
+    q=deque()
+    q.append(root)
+    while len(q) != 0:
+        p=q.popleft()
+        print(p.data, end="->")
+        if p.leftChild is not None:
+            q.append(p.leftChild)
+        if p.rightChild is not None:
+            q.append(p.rightChild)            
+            
+
     
 pre_order(root)
 print()
 post_order(root)
 print()
-in_order(root)    
+in_order(root)  
+print()
+level_order(root)
