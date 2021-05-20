@@ -25,7 +25,17 @@ def Insert(rootNode,InsertedValue):
             Insert(rootNode.rightChild,InsertedValue)
     return "Value Inserted!!" 
 
+#pre oreder function to print the BST 
+def preOrder(root):
+    if root is None:
+        return 
+    print(root.data)
+    preOrder(root.leftChild)
+    preOrder(root.rightChild)
+
 
 Insert(root,75)
-Insert(root,60)
+Insert(root,80)
 Insert(obj,50)
+preOrder(root)
+
