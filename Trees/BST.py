@@ -32,10 +32,19 @@ def preOrder(root):
     print(root.data)
     preOrder(root.leftChild)
     preOrder(root.rightChild)
-
+    
+#pre oreder function to print the BST 
+def postOrder(root):
+    if root is None:
+        return
+    postOrder(root.leftChild)
+    postOrder(root.rightChild)    
+    print(root.data)
+    
 
 Insert(root,75)
 Insert(root,80)
 Insert(obj,50)
 preOrder(root)
+postOrder(root)
 
