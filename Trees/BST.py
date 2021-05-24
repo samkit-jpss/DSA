@@ -47,7 +47,21 @@ def InOrder(root):
         return
     InOrder(root.leftChild)
     print(root.data)
-    InOrder(root.rightChild)    
+    InOrder(root.rightChild) 
+
+    #Level-Order Traversal
+def level_order(root):
+    if root is None:
+        return "No Root Node"
+    q=deque()
+    q.append(root)
+    while len(q) != 0:
+        p=q.popleft()
+        print(p.data, end="->")
+        if p.leftChild is not None:
+            q.append(p.leftChild)
+        if p.rightChild is not None:
+            q.append(p.rightChild)  
     
     
     
@@ -57,4 +71,5 @@ Insert(root,80)
 Insert(obj,50)
 preOrder(root)
 postOrder(root)
+level_order(root)
 InOrder(root)
