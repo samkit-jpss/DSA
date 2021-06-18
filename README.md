@@ -1,3 +1,4 @@
 # DSA
 
-### Implementation of various Data structure using python as a language
+- Data Structures Implementation using python as a programming language
+- ADT implemented : Linked List, Stacks, Queues, Trees and Graphs
