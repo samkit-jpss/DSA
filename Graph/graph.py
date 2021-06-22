@@ -17,7 +17,19 @@ class Graph:
             for adjVertex in self.gdict[deqVertex]:
                 if adjVertex not in vis:
                     queue.append(adjVertex)
-                    vis.append(adjVertex)        
+                    vis.append(adjVertex)   
+   
+    def dfs(self,vertex):
+        stack = [ vertex ]
+        vis = [ vertex ]
+        while stack:
+            deqVertex = stack.pop()
+            print(deqVertex)
+            for adjVertex in self.gdict[deqVertex]:
+                if adjVertex not in vis:
+                    stack.append(adjVertex)
+                    vis.append(adjVertex)                
+                
 
 connections ={"samkit" : ["nehal","anuj"],
 "nehal" : ["samkit","anuj"],
