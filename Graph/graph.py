@@ -37,3 +37,6 @@ connections ={"samkit" : ["nehal","anuj"],
              }
 
 obj1 = Graph(connections)
+obj1.dfs("nehal")
+obj1.bfs("nehal")
+obj1.connectionsLenght("samkit")
